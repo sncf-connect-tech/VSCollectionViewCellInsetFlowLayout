@@ -1,0 +1,6 @@
+framework module Pods_VSCollectionViewCellInsetFlowLayout_Example {
+  umbrella header "Pods-VSCollectionViewCellInsetFlowLayout_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
