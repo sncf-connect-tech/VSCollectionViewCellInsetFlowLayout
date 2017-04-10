@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'VSCollectionViewCellInsetFlowLayout_Example' do
+  pod 'VSCollectionViewCellInsetFlowLayout', :path => '../'
+
+  target 'VSCollectionViewCellInsetFlowLayout_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
