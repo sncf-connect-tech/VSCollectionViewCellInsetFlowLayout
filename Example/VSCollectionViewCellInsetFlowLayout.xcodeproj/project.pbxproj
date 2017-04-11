@@ -15,6 +15,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		71786CFD7B3C988E6D2DEE8A /* Pods_VSCollectionViewCellInsetFlowLayout_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90049978D3FF50DA2C8F29A /* Pods_VSCollectionViewCellInsetFlowLayout_Tests.framework */; };
+		F0AD0AB41E9CCD3B00282AD0 /* SimpleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AD0AB31E9CCD3B00282AD0 /* SimpleCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1A8A1A5F2AB3241C19D2D75E /* VSCollectionViewCellInsetFlowLayout.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = VSCollectionViewCellInsetFlowLayout.podspec; path = ../VSCollectionViewCellInsetFlowLayout.podspec; sourceTree = "<group>"; };
+		1A8A1A5F2AB3241C19D2D75E /* VSCollectionViewCellInsetFlowLayout.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = VSCollectionViewCellInsetFlowLayout.podspec; path = ../VSCollectionViewCellInsetFlowLayout.podspec; sourceTree = "<group>"; };
 		45DA8E2EE793C95910328150 /* Pods-VSCollectionViewCellInsetFlowLayout_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VSCollectionViewCellInsetFlowLayout_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VSCollectionViewCellInsetFlowLayout_Tests/Pods-VSCollectionViewCellInsetFlowLayout_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* VSCollectionViewCellInsetFlowLayout_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VSCollectionViewCellInsetFlowLayout_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -41,12 +42,13 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		656AEDC52261A8127EF70390 /* Pods_VSCollectionViewCellInsetFlowLayout_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VSCollectionViewCellInsetFlowLayout_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		77AA6FBEE6D36902C1763E75 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		A004CF961BC530B39F12C570 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		77AA6FBEE6D36902C1763E75 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		A004CF961BC530B39F12C570 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A216438ABEC6C07971E67CB1 /* Pods-VSCollectionViewCellInsetFlowLayout_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VSCollectionViewCellInsetFlowLayout_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-VSCollectionViewCellInsetFlowLayout_Example/Pods-VSCollectionViewCellInsetFlowLayout_Example.release.xcconfig"; sourceTree = "<group>"; };
 		A3CCBD64C479D63D2CFD8E37 /* Pods-VSCollectionViewCellInsetFlowLayout_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VSCollectionViewCellInsetFlowLayout_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VSCollectionViewCellInsetFlowLayout_Example/Pods-VSCollectionViewCellInsetFlowLayout_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		C90049978D3FF50DA2C8F29A /* Pods_VSCollectionViewCellInsetFlowLayout_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VSCollectionViewCellInsetFlowLayout_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC4FAB47A828BBA59378F00F /* Pods-VSCollectionViewCellInsetFlowLayout_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VSCollectionViewCellInsetFlowLayout_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VSCollectionViewCellInsetFlowLayout_Tests/Pods-VSCollectionViewCellInsetFlowLayout_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		F0AD0AB31E9CCD3B00282AD0 /* SimpleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		607FACD21AFB9204008FA782 /* Example for VSCollectionViewCellInsetFlowLayout */ = {
 			isa = PBXGroup;
 			children = (
+				F0AD0AB21E9CCD1D00282AD0 /* cell */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -157,6 +160,14 @@
 				C90049978D3FF50DA2C8F29A /* Pods_VSCollectionViewCellInsetFlowLayout_Tests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F0AD0AB21E9CCD1D00282AD0 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				F0AD0AB31E9CCD3B00282AD0 /* SimpleCollectionViewCell.swift */,
+			);
+			name = cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,6 +372,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0AD0AB41E9CCD3B00282AD0 /* SimpleCollectionViewCell.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
