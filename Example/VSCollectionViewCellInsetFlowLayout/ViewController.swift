@@ -76,6 +76,16 @@ extension ViewController : CollectionViewDelegateCellInsetFlowLayout {
         if indexPath.item == 0 {
             return UIEdgeInsets(top: 20, left: 0, bottom: 10, right: 0)
         }
+        if indexPath.section == 0 {
+            return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
+        }
+        if indexPath.section == 1 {
+            return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 20)
+        }
+        if indexPath.section == 2 {
+            return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        }
+
         return UIEdgeInsets.zero
     }
 }
