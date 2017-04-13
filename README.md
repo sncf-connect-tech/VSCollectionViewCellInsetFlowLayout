@@ -17,10 +17,10 @@ Instanciate a VSCollectionViewCellInsetFlowLayout then set it as the layout of t
 collectionView.collectionViewLayout = VSCollectionViewCellInsetFlowLayout()
 ```
 
-VSCollectionViewCellInsetFlowLayout is using the collectionview delegate if this one conforms to ```CollectionViewDelegateCellInsetFlowLayout```.
+VSCollectionViewCellInsetFlowLayout is using the collectionview delegate if this one conforms to ```VSCollectionViewDelegateCellInsetFlowLayout```.
 Implement ```collectionView(_:layout:insetForItemAt:)```:
 ```swift
-extension ViewController : CollectionViewDelegateCellInsetFlowLayout {
+extension ViewController : VSCollectionViewDelegateCellInsetFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForItemAt indexPath: IndexPath) -> UIEdgeInsets {
         if indexPath.item == 0 {
             return UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0)
