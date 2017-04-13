@@ -1,29 +1,63 @@
 # VSCollectionViewCellInsetFlowLayout
 
-[![CI Status](http://img.shields.io/travis/myrddinus/VSCollectionViewCellInsetFlowLayout.svg?style=flat)](https://travis-ci.org/myrddinus/VSCollectionViewCellInsetFlowLayout)
-[![Version](https://img.shields.io/cocoapods/v/VSCollectionViewCellInsetFlowLayout.svg?style=flat)](http://cocoapods.org/pods/VSCollectionViewCellInsetFlowLayout)
-[![License](https://img.shields.io/cocoapods/l/VSCollectionViewCellInsetFlowLayout.svg?style=flat)](http://cocoapods.org/pods/VSCollectionViewCellInsetFlowLayout)
-[![Platform](https://img.shields.io/cocoapods/p/VSCollectionViewCellInsetFlowLayout.svg?style=flat)](http://cocoapods.org/pods/VSCollectionViewCellInsetFlowLayout)
+VSCollectionViewCellInsetFlowLayout, based on UICollectionViewFlowLayout, enables to add margins on cells
 
-## Example
+<p align="center" >
+  <img src="https://raw.githubusercontent.com/voyages-sncf-technologies/VSCollectionViewCellInsetFlowLayout/master/assets/screenshot.png" alt="VSCollectionViewCellInsetFlowLayout" title="VSCollectionViewCellInsetFlowLayout">
+</p>
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+## Get Started
 
-## Requirements
+Based on the same principle of ```collectionView(_:layout:insetForSectionAt:)```, VSCollectionViewCellInsetFlowLayout provides a delegate method to define margins on ```UICollectionViewCell```
+
+### Setup
+
+Instanciate a VSCollectionViewCellInsetFlowLayout then set it as the layout of the collectionView:
+```swift
+collectionView.collectionViewLayout = VSCollectionViewCellInsetFlowLayout()
+```
+
+VSCollectionViewCellInsetFlowLayout is using the collectionview delegate if this one conforms to ```CollectionViewDelegateCellInsetFlowLayout```.
+Implement ```collectionView(_:layout:insetForItemAt:)```:
+```swift
+extension ViewController : CollectionViewDelegateCellInsetFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForItemAt indexPath: IndexPath) -> UIEdgeInsets {
+        if indexPath.item == 0 {
+            return UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0)
+        }
+        return UIEdgeInsets.zero
+    }
+}
+```
+
+Et voilà !
 
 ## Installation
 
-VSCollectionViewCellInsetFlowLayout is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+### Installation with CocoaPods
 
-```ruby
-pod "VSCollectionViewCellInsetFlowLayout"
-```
+Copy and paste the following lines to your PodFile file:  
+    
+    source 'https://github.com/CocoaPods/Specs.git'
+    pod 'VSCollectionViewCellInsetFlowLayout'
 
-## Author
+### Manual installation
 
-myrddinus, GGuihal@voyages-sncf.com
+- [Download](https://github.com/voyages-sncf-technologies/VSCollectionViewCellInsetFlowLayout/releases) the last release of TableViewDescriptor.
+- Import the folder *VSCollectionViewCellInsetFlowLayout* into your project.
+
+### Sample
+
+You may download the project to have a look at the integrated sample.
+
+
+## Credits
+
+VSCollectionViewCellInsetFlowLayout is owned and maintained by [Voyages-sncf.com](http://www.voyages-sncf.com/).
+
+VSCollectionViewCellInsetFlowLayout was originally created by [Gwenn Guihal](https://github.com/myrddinus).
+
 
 ## License
 
-VSCollectionViewCellInsetFlowLayout is available under the MIT license. See the LICENSE file for more info.
+TableViewDescriptor is released under the MIT license.
