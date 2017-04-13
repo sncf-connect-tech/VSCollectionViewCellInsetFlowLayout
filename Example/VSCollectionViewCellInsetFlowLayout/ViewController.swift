@@ -71,7 +71,7 @@ extension ViewController : UICollectionViewDelegateFlowLayout {
     }
 }
 
-extension ViewController : CollectionViewDelegateCellInsetFlowLayout {
+extension ViewController : VSCollectionViewDelegateCellInsetFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForItemAt indexPath: IndexPath) -> UIEdgeInsets {
         if indexPath.item == 0 {
             return UIEdgeInsets(top: 20, left: 0, bottom: 10, right: 0)

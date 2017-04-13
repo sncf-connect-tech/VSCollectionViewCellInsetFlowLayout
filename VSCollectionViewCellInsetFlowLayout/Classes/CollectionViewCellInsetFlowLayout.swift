@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-@objc public protocol CollectionViewDelegateCellInsetFlowLayout : UICollectionViewDelegateFlowLayout {
+@objc public protocol VSCollectionViewDelegateCellInsetFlowLayout : UICollectionViewDelegateFlowLayout {
     /**
      Asks the delegate for the margins to apply to item a the specified indexPath.
      + If flowLayout scrollDirection is **vertical**:
@@ -54,7 +54,7 @@ open class VSCollectionViewCellInsetFlowLayout: UICollectionViewFlowLayout {
                     continue
                 }
                 
-                let insets:UIEdgeInsets = (collectionView.delegate as? CollectionViewDelegateCellInsetFlowLayout)?.collectionView?(collectionView, layout: self, insetForItemAt: indexPath) ?? UIEdgeInsets.zero
+                let insets:UIEdgeInsets = (collectionView.delegate as? VSCollectionViewDelegateCellInsetFlowLayout)?.collectionView?(collectionView, layout: self, insetForItemAt: indexPath) ?? UIEdgeInsets.zero
                 
                 // add left or top
                 globalOffset.x += insets.left
