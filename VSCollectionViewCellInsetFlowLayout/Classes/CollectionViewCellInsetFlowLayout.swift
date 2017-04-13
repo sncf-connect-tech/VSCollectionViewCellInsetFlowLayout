@@ -26,7 +26,7 @@ import Foundation
     @objc optional func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForItemAt indexPath: IndexPath) -> UIEdgeInsets
 }
 
-public class VSCollectionViewCellInsetFlowLayout: UICollectionViewFlowLayout {
+open class VSCollectionViewCellInsetFlowLayout: UICollectionViewFlowLayout {
     
     fileprivate var cachedItemAttributes = [IndexPath:UICollectionViewLayoutAttributes]()
     fileprivate var globalOffset = CGPoint()
