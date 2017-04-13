@@ -43,7 +43,7 @@ Copy and paste the following lines to your PodFile file:
 
 ### Manual installation
 
-- [Download](https://github.com/voyages-sncf-technologies/VSCollectionViewCellInsetFlowLayout/releases) the last release of TableViewDescriptor.
+- [Download](https://github.com/voyages-sncf-technologies/VSCollectionViewCellInsetFlowLayout/releases) the last release of VSCollectionViewCellInsetFlowLayout.
 - Import the folder *VSCollectionViewCellInsetFlowLayout* into your project.
 
 ### Sample
