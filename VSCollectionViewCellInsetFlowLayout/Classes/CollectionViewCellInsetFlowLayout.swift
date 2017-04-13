@@ -95,15 +95,15 @@ open class VSCollectionViewCellInsetFlowLayout: UICollectionViewFlowLayout {
 
     }
     
-    public override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
+    open override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
         return cachedItemAttributes[indexPath]
     }
     
-    public override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+    open override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         return cachedItemAttributes.values.filter { rect.intersects($0.frame) }
     }
     
-    public override var collectionViewContentSize: CGSize {
+    open override var collectionViewContentSize: CGSize {
         return contentSize
     }
 }
