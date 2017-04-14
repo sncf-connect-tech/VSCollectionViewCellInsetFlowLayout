@@ -60,4 +60,4 @@ VSCollectionViewCellInsetFlowLayout was originally created by [Gwenn Guihal](htt
 
 ## License
 
-TableViewDescriptor is released under the MIT license.
+VSCollectionViewCellInsetFlowLayout is released under the MIT license.
