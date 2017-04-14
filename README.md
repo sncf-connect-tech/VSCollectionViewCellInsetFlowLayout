@@ -32,6 +32,16 @@ extension ViewController : VSCollectionViewDelegateCellInsetFlowLayout {
 
 Et voilà !
 
+## Notes
+
+If flowLayout scrollDirection is **vertical**:
+  - **inset.top** offsets the item vertically, **inset.bottom** offsets the next item vertically or offsets contentSize if no more cell. All next items and contentSize are also offset vertically by the specified margins.
+  - **inset.left** offset the item horizontally and subtracts the value from the cell width, **inset.right** updates the width of the cell without offsets its origin. Others cells and contentSize are **not** impacted by the specified margins.
+
+If flowLayout scrollDirection is **horizontal**:
+  - **inset.left** offsets the item horizontally, **inset.right** offsets the next item horizontally or offsets contentSize if no more cell. All next items and contentSize are also offset horizontally by the specified margins.
+  - **inset.top** offset the item vertically and subtracts the value from the cell height, **inset.bottom** updates the height of the item without offsets its origin. Others items and contentSize are **not** impacted by the specified margins.
+
 ## Installation
 
 ### Installation with CocoaPods
