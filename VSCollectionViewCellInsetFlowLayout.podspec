@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'VSCollectionViewCellInsetFlowLayout'
-  s.version          = '1.0.2'
+  s.version          = '1.0.3'
   s.summary          = 'Apply margins to UICollectionViewCells'
   s.description      = <<-DESC
 Based on the same principle of collectionView(_:layout:insetForSectionAt:), VSCollectionViewCellInsetFlowLayout provides a delegate method to define margins on UICollectionViewCell
