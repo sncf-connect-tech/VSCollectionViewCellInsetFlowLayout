@@ -47,6 +47,7 @@ open class VSCollectionViewCellInsetFlowLayout: UICollectionViewFlowLayout {
         let sectionsCount = collectionView.numberOfSections
         for sectionIndex in 0..<sectionsCount {
             let itemsCount = collectionView.numberOfItems(inSection: sectionIndex)
+            let sectionInset = (collectionView.delegate as? UICollectionViewDelegateFlowLayout)?.collectionView?(collectionView, layout: self, insetForSectionAt: sectionIndex) ?? self.sectionInset
             for itemIndex in 0..<itemsCount {
                 let indexPath = IndexPath(item: itemIndex, section: sectionIndex)
                 
@@ -56,9 +57,16 @@ open class VSCollectionViewCellInsetFlowLayout: UICollectionViewFlowLayout {
                 
                 let insets:UIEdgeInsets = (collectionView.delegate as? VSCollectionViewDelegateCellInsetFlowLayout)?.collectionView?(collectionView, layout: self, insetForItemAt: indexPath) ?? UIEdgeInsets.zero
                 
-                // add left or top
-                globalOffset.x += insets.left
-                globalOffset.y += insets.top
+                let isfirstItemOnRowOrCol = scrollDirection == .vertical && itemAttributes.frame.origin.x <= sectionInset.left
+                    || scrollDirection == .horizontal && itemAttributes.frame.origin.y <= sectionInset.top
+                let isLastItemOnRowOrCol = scrollDirection == .vertical && itemAttributes.frame.maxX >= collectionView.frame.width - sectionInset.right
+                    || scrollDirection == .horizontal && itemAttributes.frame.maxY >= collectionView.frame.height - sectionInset.bottom
+                
+                if isfirstItemOnRowOrCol {
+                    // add left or top
+                    globalOffset.x += insets.left
+                    globalOffset.y += insets.top
+                }
                 
                 // apply offset
                 switch scrollDirection {
@@ -79,8 +87,10 @@ open class VSCollectionViewCellInsetFlowLayout: UICollectionViewFlowLayout {
                 cachedItemAttributes[indexPath] = itemAttributes
                 
                 // add right or bottom
-                globalOffset.x += insets.right
-                globalOffset.y += insets.bottom
+                if isLastItemOnRowOrCol {
+                    globalOffset.x += insets.right
+                    globalOffset.y += insets.bottom
+                }
             }
         }
         
