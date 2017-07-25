@@ -51,7 +51,7 @@ open class VSCollectionViewCellInsetFlowLayout: UICollectionViewFlowLayout {
             for itemIndex in 0..<itemsCount {
                 let indexPath = IndexPath(item: itemIndex, section: sectionIndex)
                 
-                guard let itemAttributes = super.layoutAttributesForItem(at: indexPath)?.copy() as? UICollectionViewLayoutAttributes else {
+                guard indexPath.section < collectionView.numberOfSections, indexPath.row < collectionView.numberOfItems(inSection:indexPath.section) , let itemAttributes = super.layoutAttributesForItem(at: indexPath)?.copy() as? UICollectionViewLayoutAttributes else {
                     continue
                 }
                 
