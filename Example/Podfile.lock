@@ -1,0 +1,16 @@
+PODS:
+  - VSCollectionViewCellInsetFlowLayout (0.1.0)
+
+DEPENDENCIES:
+  - VSCollectionViewCellInsetFlowLayout (from `../`)
+
+EXTERNAL SOURCES:
+  VSCollectionViewCellInsetFlowLayout:
+    :path: ../
+
+SPEC CHECKSUMS:
+  VSCollectionViewCellInsetFlowLayout: 2e32d98635f7947a530d419ca29df09edc83d494
+
+PODFILE CHECKSUM: 2cc6cfb4ab24ecf0722d3ca27f665b2526d2d5c6
+
+COCOAPODS: 1.1.1
